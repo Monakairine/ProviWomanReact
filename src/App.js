@@ -16,12 +16,8 @@ export default function App() {
       <NavBar/>
       <Contents/>
       <Contact/>
-      <Register/>
-      <LoginPage/>
-      <Footer/>
-     
-      
-    </div>
+      <Footer/> 
+   </div>
   );
 }
 
