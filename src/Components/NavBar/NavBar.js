@@ -1,26 +1,30 @@
 import React from "react";
-import Img from "../../IMG/ux-design.svg"
 import "../../index.css";
-import Register from '../RegisterPage/Register'
+import { useHistory } from "react-router-dom";
+import {goToLoginPage } from '../Routes/Cordinator';
 
-
-class NavBar extends React.Component {
-
-    render() {
+export default function NavBar() {
+// class NavBar extends React.Component {
+    
+//     render() {
+        const history = useHistory();
         return (
+            
             <div>
+             
                 <ul id="nav">
                     <li><a href="#">Sobre nós</a></li>
                     <li><a href="#">Nossa Missão</a></li>
                     <li><a href="#">Serviços Oferecidos</a></li>
                     <li><a href="#">Mentoria</a></li>
                     <li><a href="#">Contato</a></li>
-                    <li><a href="LoginPage">Login</a></li>
+                    <li><a onClick={() => goToLoginPage(history)}>Login</a></li>
                </ul>
+          
             </div>
         )
     }
 
-}
 
-export default NavBar
+
+// export default NavBar

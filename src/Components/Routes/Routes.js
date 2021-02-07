@@ -10,9 +10,7 @@ export default function Routes() {
   return (
     <BrowserRouter>
       <Switch>
-      <Route exact path="/teladirecionamento">
-          <Screen/>
-          </Route>
+       
         <Route exact path="/login">
           <LoginPage/>
         </Route>
