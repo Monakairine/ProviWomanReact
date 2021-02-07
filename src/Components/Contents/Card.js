@@ -21,7 +21,7 @@ class Card extends React.Component {
                     <img src={this.props.img} alt='' />
 
                     <div>
-                        <span className='div-title'>
+                        <span className='div-card-title'>
                             {this.props.title}
                         </span>
                         <br />

@@ -19,10 +19,12 @@ export default function App() {
       <Footer/>
       <Routes/>
       
-         
+        
     </div>
 
   );
+
+
 }
 
 

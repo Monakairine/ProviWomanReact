@@ -3,7 +3,8 @@ import "../../index.css";
 import Card from "./Card"
 import ImgCard from "./ImgCard"
 
-import imgLogo from "../../IMG/LogoEmpresa.jpeg"
+import imgLogo from "../../IMG/LogoOficial.jpeg"
+import imgLogo2 from "../../IMG/LogoEmpresa.jpeg"
 
 import Mentor1 from "../../IMG/woman1.jpg"
 import Mentor2 from "../../IMG/woman2.jpg"
@@ -26,14 +27,14 @@ const listOfContents = [
         title: 'Sobre a empresa',
         description: `Somos uma empresa focada no seguimento de UX. Oferecemos uma plataforma integrada entre profissionais e empresas
         para que pessoas que desejam iniciar na área consigam ter oportunidades de projetos para criar seu portifólio. Além dos projetos, oferecemos
-        dicas práticas de como melhorar seu portifólio e mentorias, além da oportunidade de você criar um network em nossa plataforma`,
+        dicas práticas de como melhorar seu portifólio e mentorias. Além disso você tem a oportunidade criar um network em nossa plataforma.`,
     },
 
     {
         className: 'section bg-grey',
-        img: imgLogo,
+        img: imgLogo2,
         title: 'Nossa missão',
-        description: `Apoiar profissionais em início de carreira, seja em um primeiro emprego ou em uma mudança de emprego a conseguirem
+        description: `Apoiar mulheres em início de carreira, seja em um primeiro emprego ou em uma mudança de emprego a conseguirem
                         oportunidades no mercado de trabalho na área de UX, através de auxílio para contruir portifólio, dicas práticas, feedbacks e mentorias.`,
     },
 ]
@@ -43,36 +44,36 @@ const listOfMentors = [
     {
         img: Mentor1,
         name: "Ana",
-        description: "algum texto",
+        description: "Auxilío mulheres a administrarem melhor o tempo e assim lidar com o momento de transição.",
     },
 
     {
         img: Mentor2,
-        name: "Ana",
-        description: "algum texto",
+        name: "Jéssica",
+        description: "Mentora para profissionais em ínicio de carreira",
     },
 
     {
         img: Mentor3,
-        name: "Ana",
-        description: "algum texto",
+        name: "Maria",
+        description: "Auxilío mulheres a administrarem melhor o tempo e assim lidar com o momento de transição.",
     },
 
     {
         img: Mentor4,
-        name: "Ana",
-        description: "algum texto",
+        name: "Paula",
+        description: "Especialista em Networking",
     },
     {
         img: Mentor5,
-        name: "Ana",
-        description: "algum texto",
+        name: "Júlia",
+        description: "Ofereço aulas práticas, construa seu primeiro projeto do zero",
     },
 
     {
         img: Mentor6,
-        name: "Ana",
-        description: "algum texto",
+        name: "Fernanda",
+        description: "Especialista em UX",
     }
 ]
 
