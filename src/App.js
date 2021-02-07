@@ -16,11 +16,11 @@ export default function App() {
       <NavBar/>
       <Contents/>
       <Contact/>
-      <Footer/>   
-      
+      <Footer/> 
     </div>
 
  );
+
 }
 
 

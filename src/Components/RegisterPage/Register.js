@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import { useForm } from '../Hooks/UseForm'
 
 
+<<<<<<< HEAD
  const FormInputsSignUp = styled.form`
   /* display: grid; */
   /* height: 20vh; */
@@ -15,8 +16,18 @@ import { useForm } from '../Hooks/UseForm'
   /* margin-left: 3%; */
   /* margin-bottom: 5%; */
   background-color:red;
+=======
+const FormInputs = styled.form`
+display: flex;
+flex-direction: column;
+height: 20vh;
+width: 335px;
+justify-content: space-around;
+margin-top: 20%;
+margin-left: 3%;
+margin-bottom: 5%;
+>>>>>>> d3894e97c8a59ccc16a2b03ceebe03d32addcddf
 `;
-
 
 function Register() {
     const [showPassword, setShowPassword] = React.useState(false)
@@ -27,9 +38,8 @@ function Register() {
       cpf: "",
       password: ""
     })
-    
+     
    
-    // const history = useHistory()
   
     const handleInputChange = (event) => {
       const {value, name} = event.target
@@ -40,10 +50,10 @@ function Register() {
     const handleSubmit = (event) => {
       event.preventDefault()
       
-    //   signUp(form, history)
+   
     }
   
-    // Função para mostrar a senha ou não
+    
     const handleShowPassword = () => {
       if (showPassword) {
         setShowPassword(false)
@@ -51,13 +61,10 @@ function Register() {
         setShowPassword(true)
         }
       }
-  
-  
     return (
         <div>
-        <FormInputsSignUp onSubmit={handleSubmit}>
-  
-          <TextField 
+        <FormInputs onSubmit={handleSubmit}>
+            <TextField 
             value={form.name} 
             onChange={handleInputChange}
             variant='outlined'
@@ -157,7 +164,7 @@ function Register() {
           >
             CRIAR
           </Button>
-        </FormInputsSignUp>
+        </FormInputs>
       </div>
     );
   }

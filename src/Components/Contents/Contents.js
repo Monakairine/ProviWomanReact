@@ -104,13 +104,7 @@ const listOfAdvantages = [
         name: "Receba feedbacks",
         description: "Seus projetos recebem feedback das empresas para a qual você desenvolveu.",
     },
-
-
-    
 ]
-
-
-
 
 class Contents extends React.Component {
 
