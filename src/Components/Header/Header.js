@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../../IMG/ux-design-logo2.svg"
+import Logo from "../../IMG/LogoOficial.jpeg"
 import "../../index.css";
 
 
@@ -10,13 +10,12 @@ class Header extends React.Component{
 
         return (
             <div className='header'>
+              <img src={Logo} className='header-imag' />
               <span className='header-title'>
                 Mulheres UX
-                  </span>
-              <br />
+              </span>
               <span className="header-text">
                 Apoie mulheres na área de UX/UI Designe
-                     <img src={Logo} className='header-imag' />
               </span>
             </div>
           );

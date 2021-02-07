@@ -4,6 +4,9 @@
   box-sizing: border-box;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;500&display=swap');
+
+
 #body{
   min-height: 30vh;
   max-width: 100vw;
@@ -18,33 +21,38 @@
 
 .header{
   display:grid;
-  grid-template-columns: auto auto;
-  background-color: #b5179e;
+  grid-template-rows: auto auto;
   color: white;
   width: 100%;
   text-align: center;
-  padding: 40px ;
+  padding: 48px;
+  justify-content: center;
+  background-color: #00DBDE;
+  background-image: linear-gradient(45deg, #264653 0%, #1d3557 100%);
+
 }
 
 .header-title{
-  font-size: 50px;
+  font-size: 6em;
+  font-family: 'Oswald';
+  padding: 48px 48px 24px;
 
 }
 
 .header-text{
+  text-align: right;
   font-size: 20px;
 }
 
 .header-imag{
+  display: grid;
+  justify-self: center;
   height: 100px;
-  width: 100%;
-  margin-top: 40px;
-
 }
 
 #nav {
   display: grid;
-  grid-template-columns: repeat(5,auto);
+  grid-template-columns: repeat(6,auto);
 	width: 100vw;
 	float: center;
 	padding: 0;
@@ -68,7 +76,7 @@
 }
 
 #nav li a:hover {
-	color: #b5179e;
+	color: #1d3557;
 	background-color: #fff; 
 }
 
