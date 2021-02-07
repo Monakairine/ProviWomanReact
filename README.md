@@ -1,70 +1,121 @@
-# Getting Started with Create React App
+###Trabalho Equipe 12 - Trabalho Realizado para Provi Hack Woman no Hackaton 2021
+Desenvolvedoras: Renata Caetano e Monalisa Kairine
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+link do surge: http://godly-beast.surge.sh/
 
-## Available Scripts
+### Modelo exemplo para Backend
 
-In the project directory, you can run:
 
-### `yarn start`
+## ESTRUTURA DE DADOS  
+  
+* ## Usuários Profissional 
+  * id
+  * name
+  * nickname 
+  * email
+  * telefone
+  * endereço
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+  * ## Usuários Empresa 
+  * id
+  * name
+  * atuação
+  * email
+  * telefone
+  * endereço
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    * ## Usuários Mentoria 
+  * id
+  * name
+  * atuação
+  * email
+  * telefone
+  * endereço
 
-### `yarn test`
+* ## Cursos
+  * id
+  * title
+  * description
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* ## Vagas 
+  * id
+  * title
+  * description
+---
 
-### `yarn build`
+## CRIAÇÃO DE TABELAS - MySql
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sql
+CREATE TABLE user_professional (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    nickname VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    telefone
+    endereco VARCHAR(64) NOT NULL
+);
+```
+```sql
+CREATE TABLE user_company (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    atuacao VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    telefone INT (10) NOT NULL,
+    endereco VARCHAR(64) NOT NULL
+);
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```sql
+CREATE TABLE user_mentor (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    atuacao VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    telefone INT (10) NOT NULL,
+    endereco VARCHAR(64) NOT NULL
+);
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `yarn eject`
+## ENDPOINTS 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* ## Criar usuário
+  * Método: PUT
+  * Path: `/user`
+  * Body:
+    * name (obrigatório)
+    * nickname (obrigatório)
+    * email (obrigatório)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* ## Pegar usuário pelo id
+  * Método: GET
+  * Path: `/user/:id`
+  * Body de Resposta: (retornar um erro se não encontrar)
+    * id
+    * nickname
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+* ## Editar usuário**
+  * Método: POST
+  * Path: `/user/edit/:id`
+  * Body:
+    * name (opcional; não pode ser vazio)
+    * nickname (opcional; não pode ser vazio)
+    * email (opcional; não pode ser vazio)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* ## Criar Curso
+  * Método: PUT
+  * Path: `/curso`
+  * Body:
+    * title (obrigatório)
+    * description (obrigatório)
+   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
