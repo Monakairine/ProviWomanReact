@@ -1,22 +1,20 @@
 import React from "react";
 import "../../index.css";
 import Card from "./Card"
-import CardSeveralImages from "./CardSeveralImages"
+import ImgCard from "./ImgCard"
 import Img1 from "../../IMG/Img.jpg"
 
-import mentor1 from "../../IMG/woman1.jpg"
-import mentor2 from "../../IMG/woman2.jpg"
-import mentor3 from "../../IMG/woman3.jpg"
-import mentor4 from "../../IMG/woman4.jpg"
-import mentor5 from "../../IMG/woman5.jpg"
-import mentor6 from "../../IMG/woman6.jpg"
+import Mentor1 from "../../IMG/woman1.jpg"
+import Mentor2 from "../../IMG/woman2.jpg"
+import Mentor3 from "../../IMG/woman3.jpg"
+import Mentor4 from "../../IMG/woman4.jpg"
+import Mentor5 from "../../IMG/woman5.jpg"
+import Mentor6 from "../../IMG/woman6.jpg"
+
+import portifolio from "../../IMG/portifolio.svg"
 
 
-
-
-
-
-const contentsObject = [
+const listOfContents = [
 
     {
         className: 'section',
@@ -30,33 +28,83 @@ const contentsObject = [
     {
         className: 'section bg-grey',
         img: Img1,
-        title: 'Sobre a empresa 2',
+        title: 'Nossa missão',
         description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             Sed vel arcu in turpis tempor dictum. Sed sollicitudin 
             ex nec justo placerat, sit amet varius nunc feugiat.`,
     },
-
-    {
-        className: 'section',
-        img: Img1,
-        title: `Sed vel arcu`,
-        description: `ed sodales, turpis vel ultricies varius, turpis dolor rhoncus 
-            velit, sit amet elementum neque dui in lorem. Vivamus eget libero elit. 
-            Ut vel volutpat lectus, et blandit est. Fusce et pharetra augue, quis 
-            pellentesque libero. Sed vel arcu in turpis tempor dictum. Sed sollicitudin 
-            ex nec justo placerat, sit amet varius nunc feugiat. `
-
-    }
 ]
 
-const listOfContentsWithSeveralImages = [      
+
+const listOfMentors = [
     {
-        className: 'sectionWithSeveralImages',
-        img1: mentor1,
+        img: Mentor1,
+        name: "Ana",
+        description: "algum texto",
+    },
+
+    {
+        img: Mentor2,
+        name: "Ana",
+        description: "algum texto",
+    },
+
+    {
+        img: Mentor3,
+        name: "Ana",
+        description: "algum texto",
+    },
+
+    {
+        img: Mentor4,
+        name: "Ana",
+        description: "algum texto",
+    },
+    {
+        img: Mentor5,
+        name: "Ana",
+        description: "algum texto",
+    },
+
+    {
+        img: Mentor6,
         name: "Ana",
         description: "algum texto",
     }
 ]
+
+const listOfAdvantages = [
+
+    {
+        img: portifolio,
+        name: "Primeiro contato com a área",
+        description: "Se você está em busca de um primeiro emprego ou passando por uma mudança de carreira oferecemos diversas dicas para que você possa conhecer e começar nessa profissão.",
+    },
+
+
+    {
+        img: portifolio,
+        name: "Rede de contatos",
+        description: "Sabemos como ter um network forte é essencial! Entre em contato com diversos profissionais da área e troque experiências!",
+    },
+
+    
+    {
+        img: portifolio,
+        name: "Produção de portifólio",
+        description: "Juntamente com empresas parceiras oferecemos uma sério de projetos para que você possa construir seu portifólio.",
+    },
+
+    {
+        img: portifolio,
+        name: "Receba feedbacks",
+        description: "Seus projetos recebem feedback das empresas para a qual você desenvolveu.",
+    },
+
+
+    
+]
+
 
 
 
@@ -64,7 +112,7 @@ class Contents extends React.Component {
 
     render() {
 
-        const listOfContents = contentsObject.map((item) => {
+        const contents = listOfContents.map((item) => {
             return (
                 <Card
                     title={item.title}
@@ -75,23 +123,43 @@ class Contents extends React.Component {
             )
         })
 
-        const ContentsWithSeveralImages = listOfContentsWithSeveralImages.map((item)=>{
-            return(
-                <CardSeveralImages
-                
+        const mentors = listOfMentors.map((item) => {
+            return (
+                <ImgCard
+                    img={item.img}
+                    name={item.name}
+                    description={item.description}
                 />
             )
-
         })
+
+        const advantages = listOfAdvantages.map((item)=>{
+            return(
+                <ImgCard
+                img={item.img}
+                name={item.name}
+                description={item.description}
+            />
+            )
+        })
+
+
 
 
         return (
             <div>
-                {listOfContents}
+                {contents}
+                <div className = "sectionAdvantages">
+                    <h1> Nossos serviços </h1>
+                    {advantages}
+                </div>
+                <div className="sectionMentoring bg-grey">
+                    <h1>Conheça Algumas de Nossas Mentoras</h1>
+                    {mentors}
+                </div>
+   
             </div>
         );
-
-
     }
 
 }
