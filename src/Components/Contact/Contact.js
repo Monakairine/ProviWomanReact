@@ -25,10 +25,6 @@ class Contact extends React.Component {
                     </div>
 
                     <div id='sect2'>
-                        <span>
-                            Contato
-                        </span>
-
                         <input type="text" placeholder="email" className="input-field" />
                         <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
                         <button className="contact-btn">Enviar</button>
