@@ -5,20 +5,20 @@ import NavBar from "./Components/NavBar/NavBar"
 import Contact from "./Components/Contact/Contact"
 import Contents from "./Components/Contents/Contents"
 import Footer from "./Components/Footer/Footer"
-import LoginPage from './Components/RegisterPage/LoginPage'
-import Register from './Components/RegisterPage/Register'
+import Routes from './Components/Routes/Routes'
 
 export default function App() {
 
   return (
-    <div id='body'>
-      <Header/>
-      <NavBar/>
+  
+     <div id='body'> 
+       <Header/>
+       <NavBar/>
       <Contents/>
       <Contact/>
-      <Register/>
-      <LoginPage/>
       <Footer/>
+
+      <Routes/>
      
       
     </div>
