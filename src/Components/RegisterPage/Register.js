@@ -6,17 +6,7 @@ import styled from 'styled-components'
 import { useForm } from '../Hooks/UseForm'
 
 
-<<<<<<< HEAD
- const FormInputsSignUp = styled.form`
-  /* display: grid; */
-  /* height: 20vh; */
-  width: 335px;
-  /* justify-content: space-around; */
-  /* margin-top: 20%; */
-  /* margin-left: 3%; */
-  /* margin-bottom: 5%; */
-  background-color:red;
-=======
+
 const FormInputs = styled.form`
 display: flex;
 flex-direction: column;
@@ -26,7 +16,6 @@ justify-content: space-around;
 margin-top: 20%;
 margin-left: 3%;
 margin-bottom: 5%;
->>>>>>> d3894e97c8a59ccc16a2b03ceebe03d32addcddf
 `;
 
 function Register() {
