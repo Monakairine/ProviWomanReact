@@ -11,11 +11,13 @@ class NavBar extends React.Component {
             <div>
                 <ul id="nav">
                     <li><a href="#">Sobre nós</a></li>
-                    <li><a href="#">Nossos Produtos</a></li>
-                    <li><a href="#">Mentorias</a></li>
+                    <li><a href="#">Nossa Missão</a></li>
+                    <li><a href="#">Serviços Oferecidos</a></li>
+                    <li><a href="#">Mentoria</a></li>
                     <li><a href="#">Contato</a></li>
                     <li><a href="Register">Cadastro</a></li>
-                </ul>
+
+               </ul>
             </div>
         )
     }
