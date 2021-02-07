@@ -8,21 +8,18 @@ class Contact extends React.Component {
     render() {
 
         return (
-            <div className='contact-container bg-grey'>
+            <div className='contact-container'>
                 <span className="div-title">Entre em contato</span>
                 <div className='contact-form'>
                     <div id='sect1'>
                         <span>Entre em contato para mais informações e dúvidas e te responderemos em 24h.</span>
                         <span>
-                            <i className="fas fa-map-marker-alt"></i>
-                              Brasil
-                          </span>
+                              Brasil, SP
+                        </span>
                         <span>
-                            <i className="fas fa-mobile-alt"></i>
                               00 9999-9999
                           </span>
                         <span>
-                            <i className="far fa-envelope"></i>
                               mulheresUX@gmail.com
                           </span>
                     </div>
@@ -30,7 +27,7 @@ class Contact extends React.Component {
                     <div id='sect2'>
                         <span>
                             Contato
-                          </span>
+                        </span>
 
                         <input type="text" placeholder="email" className="input-field" />
                         <textarea name="" id="" cols="30" rows="10" placeholder="Mensagem"></textarea>
