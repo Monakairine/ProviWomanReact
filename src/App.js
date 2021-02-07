@@ -16,13 +16,11 @@ export default function App() {
       <NavBar/>
       <Contents/>
       <Contact/>
-      <Register/>
-      <LoginPage/>
-      <Footer/>
-     
+      <Footer/>   
       
     </div>
-  );
+
+ );
 }
 
 

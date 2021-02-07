@@ -9,7 +9,7 @@ class Contact extends React.Component {
 
         return (
             <div className='contact-container'>
-                <span className="div-title">Entre em contato</span>
+                <span className="div-contact-title">Entre em contato</span>
                 <div className='contact-form'>
                     <div id='sect1'>
                         <span>Entre em contato para mais informações e dúvidas e te responderemos em 24h.</span>

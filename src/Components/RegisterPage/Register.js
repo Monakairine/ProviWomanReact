@@ -7,14 +7,14 @@ import { useForm } from '../Hooks/UseForm'
 
 
  const FormInputsSignUp = styled.form`
-  display: flex;
-  flex-direction: column;
-  height: 20vh;
+  /* display: grid; */
+  /* height: 20vh; */
   width: 335px;
-  justify-content: space-around;
-  margin-top: 20%;
-  margin-left: 3%;
-  margin-bottom: 5%;
+  /* justify-content: space-around; */
+  /* margin-top: 20%; */
+  /* margin-left: 3%; */
+  /* margin-bottom: 5%; */
+  background-color:red;
 `;
 
 
