@@ -5,6 +5,9 @@ import { TextField, Button } from '@material-ui/core'
 import VisibilityOffIcon from '@material-ui/icons/VisibilityOff'
 import VisibilityIcon from '@material-ui/icons/Visibility'
 import styled from 'styled-components'
+import { goToRegister } from '../Routes/Cordinator';
+import { useHistory } from "react-router-dom";
+
 
 const FormInputsLoginPage = styled.form`
 display: flex;
@@ -18,7 +21,8 @@ margin-bottom: 5%;
 `;
 
 
-function LoginPage() {
+export default function LoginPage() {
+    const history = useHistory();
   const [showPassword, setShowPassword] = React.useState(false)
   
   const { form, onChange } = useForm({
@@ -93,7 +97,7 @@ function LoginPage() {
           >
             LOGIN
           </Button>
-          <Button 
+          <Button onClick={() => goToRegister(history)}
             color="primary"
                      >
             Não possui cadastro? 
@@ -104,5 +108,5 @@ function LoginPage() {
   </div>
   );
 }
-export default LoginPage;
+
 

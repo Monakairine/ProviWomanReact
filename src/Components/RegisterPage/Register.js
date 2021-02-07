@@ -17,7 +17,7 @@ margin-left: 3%;
 margin-bottom: 5%;
 `;
 
-function Register() {
+export default function Register() {
     const [showPassword, setShowPassword] = React.useState(false)
   
     const {form, onChange} = useForm({
@@ -156,4 +156,4 @@ function Register() {
       </div>
     );
   }
-  export default Register;
+ 
